@@ -37,6 +37,7 @@ var init = function (window) {
             drawCircle()
             }
             
+            
         ////////////////////////////////////////////////////////////
         ///////////////// PROGRAM LOGIC ////////////////////////////
         ////////////////////////////////////////////////////////////
@@ -50,13 +51,12 @@ var init = function (window) {
             // TODO 4 : Update the circle's position //   
             for (var i = 0; i < circles.length; i++) {
                 physikz.updatePosition(circles[i]);
-                
-                for (var i = 0; i < circles.length; i++) {
-                    game.checkCirclePosition(circles[i]);
-                }
               }
 // some functions deleted due to breaking the DRY rule. (Don't repeat yourself) //
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
+            for (var i = 0; i < circles.length; i++) {
+                game.checkCirclePosition(circles[i]);
+            }
            // some functions deleted due to breaking the DRY rule. (Don't repeat yourself) //
            
            // TODO 9 : Iterate over the array
